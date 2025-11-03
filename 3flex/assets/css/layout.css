@@ -1,0 +1,22 @@
+* {
+  box-sizing:border-box;
+}
+.elements {
+  width:50%;
+  border:1px solid red;
+  padding:5px;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  gap: 1rem; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator */
+.elements > * {
+  background-color: #eeeeee;
+  padding: 1rem;
+  text-align: center;
+  width: 50px;
+}

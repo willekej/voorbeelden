@@ -1,0 +1,12 @@
+.sticky {
+  position: sticky;
+  background-color: deeppink;
+  color: white; 
+  top: 0;
+}
+
+article, nav {
+  margin-bottom: 1rem;
+}
+
+
