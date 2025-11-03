@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  border: 1px solid darkgray;
+  border-radius: 0.5rem;
+  background-color: #e5e5e5;
+}
+
+.articles {
+  width: 100%;
+  padding: 1rem;
+}
+
+img, .pokenumber{
+  display:none;
+}
