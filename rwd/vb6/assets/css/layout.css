@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #343a40;
+}
+
+nav ul li a {
+    padding: 20px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #aaaaaa;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav ul li {
+    flex: 0 0 15%;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        flex: 1 1 100%;
+    }
+}
