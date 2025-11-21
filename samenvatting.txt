@@ -1,0 +1,443 @@
+---------------------------------------------------------------------
+Les1
+---------------------------------------------------------------------
+Wat is een Markup Language?
+- tekstformaat
+- tekst & code die zegt wat de betekenis of vormgeving vd tekst is
+---------------------------------------------------------------------
+Welke Markup in HTML?
+- doctype     <!DOCTYPE html>
+- elements    <p> ... </p>, <br>, <br /> 
+- attributes  <p class="intro"> ... </p>
+- entities    &lt;  
+            als a<b   als a&lt;b
+- commentaar  <!-- ... -->
+---------------------------------------------------------------------
+2 soorten elementen (voorlopig)
+- block elements: h1, p, div 
+        (standaard gedrag: zo breed mogelijk, onder elkaar gestapeld)
+- inline elements: strong, em, a, span
+        (standaard gedrag: zo breed als de inhoud, deel van de tekst))
+---------------------------------------------------------------------
+nut div, span?: via CSS vormgeven
+<div style="border:1px solid black">...</div>
+<span style="text-decoration:underline">...</span>
+---------------------------------------------------------------------
+Semantic tags   <main>, <aside>, <nav>,...
+                alternatief voor <div>
+                blok, naam leert iets over de inhoud
+---------------------------------------------------------------------
+
+
+
+
+
+
+---------------------------------------------------------------------
+Les2
+---------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>opdracht1</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    ...
+---------------------------------------------------------------------
+    p {color:black; border:1px solid red;}
+---------------------------------------------------------------------
+    *       eender welk element
+    a       selecteer alle elementen a
+    .a      selecteer alle elementen met class="a"
+    #a      selecteer het element met id="a"
+    a.b     selecteer alle elementen a met class="b"
+    a#b     selecteer het element a met id="b"
+    a b     selecteer alle elementen b die onder een element a staan (descendant)
+                <a>...<b>...</b>....<c>...<b>....</b>...</c>....</a>
+                         wel                 wel
+    a b c   selecteer alle elementen c die onder b staan, b moet onder a staan
+    a .b    selecteer alle elementen met class="b" die onder een element a staan
+    a, b    selecteer alle elementen a en alle elementen b
+    a > b   selecteer alle elementen b die exact 1 niveau onder een element a
+            staan (child selector)
+                <a>...<b>...</b>....<c>...<b>....</b>...</c>....</a>
+                         wel                 niet
+    a[b]    selecteer alle elementen a die een attribuut b hebben
+    a:hover
+    a:first-child
+            alle elementen a die het eerste kind zijn (pseudo class)
+    https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+---------------------------------------------------------------------
+box-model:
+    content, padding, border, margin
+    
+        margin: auto (centreer)
+        margin-left: auto
+            https://dev.to/ritikaagrawal08/all-about-margin-auto-in-css-centering-and-more-2b2g
+---------------------------------------------------------------------
+    div {float:right;}
+            alle div's worden float right geplaatst (in zijn container)
+            text (en inline content) vloeit rond de div
+            originele ruimte wordt vrijgegeven
+            https://developer.mozilla.org/en-US/docs/Web/CSS/float
+
+            -------------                --------------
+            ---                          ---+++++ #####
+            #####                        ++++++++ #div#
+            #div#              -->       ++++++++ #####
+            #####                        ++++++++++++++
+            +++++++++++++                ++++++++++++++
+            +++++++++++++
+            +++++
+---------------------------------------------------------------------
+    element {display:***;}
+    display:block
+        standaard: even breed als container
+        width en height instelbaar
+        onder elkaar gestapeld
+    display:inline;
+        standaard: even breed als inhoud
+        width en height niet instelbaar
+        maakt deel uit van de tekst
+    display:inline-block;
+        standaard: even breed als inhoud
+        width en height instelbaar
+        maakt deel uit van de tekst
+    display:none
+        wordt niet getoond
+    https://learnlayout.com/display.html
+---------------------------------------------------------------------
+CSS-algortime:
+    origin: AUTHOR is belangrijker dan USER-AGENT
+    specificity: meer specifier is belangrijker dan minder specifiek
+                    p.blue                                  p
+    inheritance: bv color erft over van parent naar child
+
+
+
+
+
+---------------------------------------------------------------------
+Les3 Tabellen
+---------------------------------------------------------------------
+table, tr, td, th
+thead, tbody, tfoot
+
+rowspan: element wordt hoger (linker bovenhoek blijft staan)
+  (https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/rowSpan)
+colspan: element wordt breder (linker bovenhoek blijft staan)
+  (https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/colSpan)
+  
+table-layout fixed vs auto (https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)
+
+nth-child (https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+
+
+
+
+
+---------------------------------------------------------------------
+Les4: Git
+---------------------------------------------------------------------
+----------------------
+1. Installeer git bash
+----------------------
+. Indien git of git bash geïnstalleerd, sla deze stap over
+    https://git-scm.com/downloads
+    
+------------------------------
+2. Maak een github account aan
+------------------------------
+https://github.com/
+naamgeving voor user en email:
+   User: VoornaamAchernaamPXL 
+           (bv. SofieSchuermansPXL)
+   Email: voornaam.achternaam@student.pxl.be 
+           (bv. sofie.schuermans@student.pxl.be)
+           
+--------------------------
+3. Configureer in git-bash
+--------------------------
+git config --global user.name "Voornaam Achternaam"
+git config --global user.email "voornaam.achternaam@student.pxl.be"
+
+---------------------------
+4. Maak een ssh-sleutel aan
+---------------------------
+
+ssh-keygen -t ed25519 -C "voornaam.achternaam@student.pxl.be"
+
+Druk op Enter om de standaardlocatie te gebruiken.
+Druk op Enter om geen wachtwoord in te stellen.
+Druk nogmaals op Enter om geen wachtwoord in te stellen.
+
+---------------------------------------------------
+5. Kopieer de SSH-sleutel om te koppelen aan GitHub
+---------------------------------------------------
+cat ~/.ssh/id_ed25519.pub
+
+    ssh-ed25519 ABBAC3NzaC1lZDI1NTE5...EACgyQT664dSWp91 voornaam.achternaam@student.pxl.be
+    ###################################################
+- ga naar https://github.com/
+- klik rechtsboven op je profielfoto
+- klik op Settings 
+- ga naar SSH and GPG keys
+- klik op New SSH key
+- vul een willekeurige tekst (bv pxl_account_naam_voornaam) in bij Title
+- plak de sleutel in het veld Key. Voeg de sleutel toe door op Add SSH key te klikken.
+    ssh-ed25519 ABBAC3NzaC1lZDI1NTE5...EACgyQT664dSWp91
+    ###################################################
+---------------------------------------------------
+6. Maak Voorbeeld1 (lokale repository)
+---------------------------------------------------
+mkdir Projects
+cd Projects/
+mkdir Voorbeeld1
+cd Voorbeeld1
+git init
+echo 'print("hallo")' > hello.py3       # of open deze directory in pycharm
+git status
+git add hello.py3                       # of git add .
+git status
+git commit -m "added hello.py3"
+git log
+git log --oneline
+
+---------------------------------------------------
+7. Maak Voorbeeld2 (online repository)
+---------------------------------------------------
+cd ~/Projects
+
+Ga naar: https://github.com/new
+Geef naam voorbeeld2 in, zet visibility op private
+Klik op Create repository
+
+kopieer van de volgende pagina
+Quick setup — if you’ve done this kind of thing before
+git@github.com:jouwgebruikersnaam/voorbeeld2.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+git clone git@github.com:jouwgebruikersnaam/voorbeeld2.git
+cd voorbeeld2
+echo 'print("hallo")' > hello.py3       # of open deze directory in pycharm
+git add hello.py3                       # of git add .
+git status
+git commit -m "added hello.py3"
+git push origin
+
+
+---------------------------------------------------
+8. Maak de repository voor de PE
+---------------------------------------------------
+
+Open de onderstaande link:
+    https://classroom.github.com/a/kUQj9G6X
+
+Klik 
+    Accept this assignment
+
+Klik op de link op:
+You're ready to go!
+You accepted the assignment, pe-webessentials-25-26.
+Your assignment repository has been created:
+https://github.com/webpxl/pe-webessentials-25-26-SofieSchuermansPXL
+
+Kopieer de link
+
+cd ~/Projects
+git clone git@github.com:webpxl/pe-webessentials-25-26-SofieSchuermansPXL.git
+cd pe-webessentials-25-26-SofieSchuermansPXL
+cd pe-web[tab]
+
+printf ".idea/\n.vscode/\n.DS_Store\n" > .gitignore
+git add .gitignore
+git commit -m "Add .gitignore"
+git push origin
+
+Open in webstorm
+------------------------------------------------------------------------------------------
+
+
+
+
+
+
+---------------------------------------------------------------------
+Les5: Positionering
+---------------------------------------------------------------------
+    box-sizing: content-box;
+    width:500px;
+        breedte van inhoud wordt ingesteld (daarrond nog padding, border & margin)
+
+    box-sizing: border-box;
+    width:500px;
+        breedte van border wordt ingesteld (daarrond nog margin)
+------------------------------------------------------------------------------------------
+    margin:auto;
+        plaats in het centrum
+------------------------------------------------------------------------------------------
+    float:right; (of float:left)
+        originele ruimte van het element wordt vrijgegeven (taken out of document flow)
+        tekst (inline materie) vloeit langs het gefloate element
+        https://learnlayout.com/float.html
+        https://developer.mozilla.org/en-US/docs/Web/CSS/float
+            -------------               -------------
+            ---                         ---+++++ ####
+            ####                        ++++++++ ####
+            ####              -->       ++++++++ ####
+            ####                        +++++++++++++
+            +++++++++++++               +++++++++++++
+            +++++++++++++
+            +++++
+
+    (extra)     clear:right;  /* element springt voorbij rechts ge-floate materie */
+            clear:left;   /*                         links                    */
+                clear:both;   /*                         alle                     */
+    
+    (extra) float --> collapse-problem
+    
+        ---------------------------------              ---------------------------------
+        |######                         |              ------------------------@@@######
+        |######                         |                                      @@@######
+        |######                         |                                      @@@######
+        |######                         |   -->                                   ######
+        |@@@                            |
+        |@@@                            |
+        |@@@                            |
+        ---------------------------------
+
+    (extra) oplossing:
+
+        .parent-div:after {
+            content: " ";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        
+        https://learnlayout.com/clearfix.html
+        https://www.smashingmagazine.com/2017/12/understanding-css-layout-block-formatting-context/
+------------------------------------------------------------------------------------------
+flexbox 
+  container -->  display: flex;
+                 flex-flow: row wrap;
+
+  alles wat onder de container staat is flex-item
+  flex-item --> flex: g s b
+                      (growth-factor, shrink-factor, basis)
+                      
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-flow
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex
+------------------------------------------------------------------------------------------
+    position:static;
+        het element komt op zijn normale positie (default waarde v elk element)
+        left, right, top, bottom wordt genegeerd
+    position:relative;
+        originele ruimte van het element blijft behouden
+        positioneerbaar via left, right, top, bottom
+        positioneerbaar tov originele ruimte van het element
+    position:absolute;
+        originele ruimte van het element wordt vrijgegeven (taken out of document flow)
+        positioneerbaar via left, right, top, bottom
+        positioneerbaar
+            tov scherm indien het element geen block ancestor heeft die 
+              niet static gepositioneerd is
+            tov eerste block ancestor die niet static gepositioneerd is anders
+    position:fixed;
+        originele ruimte van het element wordt vrijgegeven (taken out of document flow)
+        positioneerbaar via left, right, top, bottom
+        scrolt mee met scherm
+    position: sticky (tussen relative en fixed)
+    
+
+
+
+    
+---------------------------------------------------------------------
+Les6: RWD
+---------------------------------------------------------------------
+layout past zich aan aan grootte van het scherm
+---------------------------------------------------------------------
+viewport
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+---------------------------------------------------------------------
+GRID = 12 per rij
+
+    <div class="row">
+            <div class="col col-3">3</div>
+            <div class="col col-3">3</div>
+            <div class="col col-3">3</div>
+            <div class="col col-3">3</div>
+        </div>
+    <div class="row">
+            <div class="col col-4">4</div>
+            <div class="col col-4">4</div>
+            <div class="col col-4">4</div>
+        </div>
+    <div class="row">
+            <div class="col col-3">3</div>
+            <div class="col col-9">9</div>
+        </div>
+        <div class="row">
+            <div class="col col-4">4</div>
+            <div class="col col-8">8</div>
+        </div>
+---------------------------------------------------------------------
+    .row {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .col {
+        padding: 1rem;
+        background-color: rebeccapurple;
+        color: white;
+        text-align: center;
+        flex: 1;
+    }
+
+    .col-1 { flex: 1; }  /* = flex: 1 1 0 */
+    .col-2 { flex: 2; }
+    .col-3 { flex: 3; }
+        .col-4 { flex: 4; }
+    .col-5 { flex: 5; }
+    .col-6 { flex: 6; }
+    .col-7 { flex: 7; }
+    .col-8 { flex: 8; }
+    .col-9 { flex: 9; }
+    .col-10 { flex: 10; }
+    .col-11 { flex: 11; }
+    .col-12 { flex: 12; }
+---------------------------------------------------------------------
+Media-queries van groot naar klein
+(desktop first) 
+
+/* grootste weergave */
+body {
+    background-color: lightgreen;
+}
+
+/* max-width: orden van groot naar klein */
+@media screen and (max-width: 900px) {
+    body {
+        background-color: lightsalmon;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightcoral;
+    }
+}
+---------------------------------------------------------------------
+Responsive images
+img {
+    width: 100%;
+    height: auto;
+}
+
