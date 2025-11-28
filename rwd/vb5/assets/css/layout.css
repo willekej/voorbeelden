@@ -30,18 +30,18 @@ main {
 }
 
 section {
-    flex: 1 1 25%;
+    flex: 0 0 25%;
     padding: 20px;
 }
 
 @media screen and (max-width: 960px) {
     section {
-        flex: 1 1 50%;
+        flex: 0 0 50%;
     }
 }
 
 @media screen and (max-width: 640px) {
     section {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
     }
 }
