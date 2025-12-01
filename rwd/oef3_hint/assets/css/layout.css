@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+main, header, footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ==================== HOOFDLAYOUT: links + rechts ==================== */
+
+/* todo: display: flex op main
+         flex: 0 0 49% op element met class left en right  
+*/
+
+/* ==================== BENODIGDHEDEN BOX ==================== */
+
+.benodigdheden {
+    padding: 2em;
+    border: 2px solid black;
+}
+
+/* ==================== INGREDIËNTEN LIJST (2 kolommen) ==================== */
+
+/* todo: display: flex op de ul met class ingredienten, geef de li's een breedte via flex */
+
+/* ==================== MATERIAAL (inline met | ) ==================== */
+ul.materiaal {
+    margin: 1em 0 1em 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.materiaal li {
+    display: inline;
+}
+
+ul.materiaal li:not(:last-child)::after {
+    content: " | ";
+}
+
+ul.materiaal li:last-child::after {
+    content: "";
+}
+/* ==================== BEREIDING ==================== */
+ol.bereiding {
+    margin: 0;
+    padding: 0;
+}
+
+ol.bereiding li {
+    padding-bottom: 5px;
+    border-bottom: 1px dotted black;
+}
+
+/* ==================== EXTRAS (met afbeeldingen) ==================== */
+ul.extras {
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+ul.extras li{
+  margin: 1em 0;
+}
+
+ul.extras li a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px dotted black;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+ul.extras li a img {
+    width:20%;
+    flex: 0 0 20%;        
+    height: auto;
+    display: block;
+}
+
+/* ==================== HEADER & FOOTER ==================== */
+header, footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* ==================== SOCIAL FOLLOW ==================== */
+ul.follow {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.follow li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media screen and (max-width: 1500px) {
+    /* 
+    todo:
+      - main header en footer width:100%
+      - pas flex van de li's onder de ul met class ingredienten aan */
+}
+
+@media screen and (max-width: 900px) {
+    /* 
+    todo
+      - flex van element met class left and class right aanpassen
+      - aside display:none
+  */
+}
