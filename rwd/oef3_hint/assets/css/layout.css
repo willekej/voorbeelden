@@ -44,9 +44,7 @@ ul.materiaal li:not(:last-child)::after {
     content: " | ";
 }
 
-ul.materiaal li:last-child::after {
-    content: "";
-}
+
 /* ==================== BEREIDING ==================== */
 ol.bereiding {
     margin: 0;
