@@ -441,3 +441,71 @@ img {
     height: auto;
 }
 
+---------------------------------------------------------------------
+
+<form action="verwerk.php" method="get">
+  <input type="text" name="fname" value="John"><br>
+  <input type="text" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form
+combinatie name=value wordt verstuurd
+    - action --> ga naar
+    - method="get" -->  data getoond in url
+    - method="post" --> data verstopt in request body
+<input type="submit" value="Verzend">       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit
+<input type="reset" value="Leeg maken">     https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/reset
+<input type="button" value="Leeg maken">     https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/button  --> JS eventlistener
+<input type="text" name="voornaam">         https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/text
+<label for="voornaam">Voornaam</labe><input type="text" name="voornaam" id="voornaam">
+                                            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label
+<input type="number" name="leeftijd">       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number                                           
+<input type="range" ...>                    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range
+<input type="email" ...>                 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/email
+<input type="checkbox" ...>                 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+                                            !! elke checkbox heeft zijn eigen name !!
+                                            scales=on
+                                            
+<input type="radio" ...>                 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
+   <input type="radio" id="huey" name="drone" value="huey" checked />
+   <label for="huey">Huey</label>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+                                            !! meerdere radiobuttons met dezelfde name !!
+                                            1 aanvinkbaar
+                                            drone=dewey wordt verstuurd
+                                            
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>                                 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea
+
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>                                   https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select
+                                            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/multiple
+              
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>                               https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset                                            
