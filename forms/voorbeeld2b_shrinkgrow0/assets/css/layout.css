@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+fieldset {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.row {
+    width:100%;
+    display:flex;
+    flex-flow: row nowrap;
+    align-items:center;    
+    margin:0.8em 0;
+}
+.col{ margin: 0.1em 1em;}
+
+
+.col-1 { flex: 0 0 calc(100%/ 12 - 2em); }
+.col-2 { flex: 0 0 calc(100% / 6 - 2em); }
+.col-3 { flex: 0 0 calc(25% - 2em); }
+.col-4 { flex: 0 0 calc(100% / 3 - 2em); }
+.col-5 { flex: 0 0 calc(100% * 5 / 12 - 2em); }
+.col-6 { flex: 0 0 calc(50% - 2em); }
+.col-7 { flex: 0  0 calc(100% * 7 / 12 - 2em); }
+.col-8 { flex: 0  0 calc(100% * 2 / 3 - 2em); }
+.col-9 { flex: 0  0 calc(75% - 2em); }
+.col-10 { flex: 0 0 calc(100% * 5 / 6 - 2em); }
+.col-11 { flex: 0 0 calc(100% * 11 / 12 - 2em); }
+.col-12 { flex: 0 0 calc(100% - 2em); }
+
+
+
+img {
+    width: 100%;
+}
+
+body, select, input {
+    font: 14pt "Fira Sans", sans-serif;
+}
+
+select, button, input[type=submit]{
+    background-color: #3fb0e0;
+    border: none;
+}
+
+input[type=submit]{
+    height:3em;
+}
+
+input, select, button, label {
+    padding: 5px;
+    display: block;
+    width: 100%;
+}
