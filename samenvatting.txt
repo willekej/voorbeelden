@@ -332,6 +332,12 @@ flexbox
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-flow
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/order
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items     
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-content       
+------------------------------------------------------------------------------------------
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc
 ------------------------------------------------------------------------------------------
     position:static;
         het element komt op zijn normale positie (default waarde v elk element)
@@ -442,17 +448,20 @@ img {
 }
 
 ---------------------------------------------------------------------
+---------------------------------------------------------------------
 
 <form action="verwerk.php" method="get">
   <input type="text" name="fname" value="John"><br>
   <input type="text" name="lname" value="Doe"><br><br>
   <input type="submit" value="Submit">
 </form>
+
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form
 combinatie name=value wordt verstuurd
     - action --> ga naar
     - method="get" -->  data getoond in url
     - method="post" --> data verstopt in request body
+
 <input type="submit" value="Verzend">       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit
 <input type="reset" value="Leeg maken">     https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/reset
 <input type="button" value="Leeg maken">     https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/button  --> JS eventlistener
