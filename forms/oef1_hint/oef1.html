@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oef1</title>
+    <link href="assets/css/layout.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Je hebt gewonnen</h1>
+    <form action="verwerking.php" method="get">
+        <div class="row">
+            <div class="col col-2">
+                <label for="naam">Naam: </label>
+            </div>
+            <div class="col col-4">
+                <input type="text" id="naam" name="naam">
+            </div>
+            <div class="col col-2">
+                <label for="voornaam">Voornaam: </label>
+            </div>
+            <div class="col col-4">
+                <input type="text" id="voornaam" name="voornaam">
+            </div>
+        </div>
+        <!-- werkt ook:
+        <div class="row">
+            <label for="naam" class="col col-2">Naam: </label>
+            <input type="text" class="col col-4" id="naam" name="naam">
+            <label for="voornaam" class="col col-2">Voornaam: </label>
+            <input type="text" class="col col-4" id="voornaam" name="voornaam">
+        </div>
+        -->
+        <div class="row">
+            <div class="col col-2">
+                <label for="straat">Straat </label>
+            </div>
+            <div class="col col-4">
+                <input type="text" id="straat" name="straat">
+            </div>
+            <div class="col col-2">
+                <label for="nummer">Nummer: </label>
+            </div>
+            <div class="col col-2">
+                <input type="text" id="nummer" name="nummer" maxlength="4">
+            </div>
+            <div class="col col-1">
+                <label for="bus" id="buslabel">Bus: </label>
+            </div>
+            <div class="col col-1">
+                <input type="text" id="bus" name="straat" size="4" maxlength="4">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
