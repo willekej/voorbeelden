@@ -451,16 +451,16 @@ img {
 ---------------------------------------------------------------------
 
 <form action="verwerk.php" method="get">
-  <input type="text" name="fname" value="John"><br>
-  <input type="text" name="lname" value="Doe"><br><br>
+  <input type="text" name="voornaam"><br>
+  <input type="text" name="achternaam"><br><br>
   <input type="submit" value="Submit">
 </form>
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form
 combinatie name=value wordt verstuurd
     - action --> ga naar
-    - method="get" -->  data getoond in url
-    - method="post" --> data verstopt in request body
+    - method="get" -->  data (voornaam=jan&achternaam=willekens) getoond in url
+    - method="post" --> data (voornaam=jan&achternaam=willekens) verstopt in request body
 
 <input type="submit" value="Verzend">       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit
 <input type="reset" value="Leeg maken">     https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/reset
