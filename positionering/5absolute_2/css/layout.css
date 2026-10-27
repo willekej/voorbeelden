@@ -1,0 +1,15 @@
+.absolute {
+  position: absolute;
+  background-color: deeppink;
+  color: white;
+
+  bottom: 0.5rem; 
+  right: 0.5rem;
+}
+
+article {
+  position: relative; /* something other than static, usually relative */
+  background-color: #eeeeee;
+  padding: 1rem;
+  height: 150px;
+}

@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.blocks {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.block {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+
+.red {
+  background-color: red;
+  left: 1rem;
+}
+
+.green {
+  background-color: green;
+  left: 2rem;
+}
+
+.blue {
+  background-color: blue;
+  left: 3rem;
+}
+
+.lowest {
+  z-index: 0;
+}
+.middle {
+  z-index: 1;
+}
+.highest {
+  z-index: 2;
+}
