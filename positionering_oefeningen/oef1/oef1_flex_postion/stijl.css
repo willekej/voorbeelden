@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  border: 1px solid darkgray;
+  border-radius: 0.5rem;
+  background-color: #e5e5e5;
+}
+
+.articles {
+  padding: 15px;
+  display:flex;                    /* <-- grote layout */
+  flex-flow: row wrap;             /* <-- grote layout */
+  gap: 10px;                       /* <-- grote layout */ 
+}
+.articles > * {
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  background-color:white;  
+  flex:  0 0 280px;                 /* <-- grote layout */
+  box-shadow: 0 5px 5px lightgray;
+  padding:15px;
+  position: relative;               /* <-- */
+}
+.articles img {
+    position: absolute;             /* <-- */
+    right: 5px;                     /* <-- */
+    top: 10px                       /* <-- */
+}
+
+.pokenumber {
+    position: absolute;             /* <-- */
+    right: 2px;                     /* <-- */
+    top: 0;                         /* <-- */
+    font-size: small;
+    color: gray;
+}
+
+
+
+.typeoverview {
+    margin-top: 15px;
+}
+
+.type {
+    padding: 5px 10px;
+    background-color: gray;
+    border-radius: 4px;
+    color: white;
+}
+
+.grass {
+    background-color: #78c850;
+}
+
+.fire {
+    background-color: #f08030;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+
+.flying {
+    background-color: #a890f0;
+}
+
+h2 {
+    color: #4078c0;
+    margin: 0;
+}
+
+
