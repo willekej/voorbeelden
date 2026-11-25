@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  display:flex;
+  flex-flow: row wrap;
+  gap: 1em 1%; /* = row-gap: 1%; column-gap: 1em; */
+}
+
+.container > * {
+  flex: 0 0 19.2%;
+  border:1px solid red;
+}

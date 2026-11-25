@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#column-1 {
+    background-color: #b2ddea;
+}
+
+#column-2 {
+    background-color: #83b8c8;
+}
+
+#column-3 {
+    background-color: #478598;
+    color: white;
+}
+
+#column-4 {
+    background-color: #1b4f5f;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section {
+    flex: 1 1 25%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    section {
+        flex: 1 1 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section {
+        flex: 1 1 100%;
+    }
+}

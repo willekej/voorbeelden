@@ -1,0 +1,28 @@
+/* 
+vergelijk met programma:
+kleur=lightgreen
+if scherm < 900: 
+   kleur = lightsalmon
+if scherm < 600:
+   kleur = lightcoral;
+*/
+
+
+/* grootste weergave */
+body {
+    background-color: lightgreen;
+}
+
+/* max-width: orden van groot naar klein */
+@media screen and (max-width: 900px) {
+    body {
+        background-color: lightsalmon;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightcoral;
+    }
+}
+

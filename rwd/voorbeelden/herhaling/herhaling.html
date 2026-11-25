@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Herhaling</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <main>
+    <h1>Selectors</h1>
+    <pre>
+a
+.a
+#a
+a b
+#a b c
+a .b
+a, b
+a[b]
+a:hover
+a:first-child
+a:nth-child(...)
+       1
+       2
+       2n
+       2n+1
+</pre>
+<hr>
+    <h1>Eenheden</h1>
+    <pre>    
+ px
+ %
+ em
+ rem
+    </pre>
+<hr>    
+<h1>display</h1>
+
+<pre>
+display: inline
+display: block
+display: inline-block
+display: flex
+</pre>
+<hr>
+<pre>
++-------------------------------+
+  | flex container                |
+  | ##############                |
+  |  display: flex;               |
+  |  flex-flow: row wrap;         |
+  |             column wrap;      |
+  |  gap: ...                     |
+  +-------------------------------+
+</pre>
+<hr>
+<pre>
+  +-------------------------------+
+  | +---+ +---+ +---+ +---+ +---+ |
+  | |   |g|   |g|   |g|   |g|   | |  
+  | +---+ +---+ +---+ +---+ +---+ |
+  |  flex: growth shrink basis    |
+  +-------------------------------+
+</pre>
+<hr>
+<pre>
+   5 * basis + 4 * gap = 100%
+   gap: 1%
+   basis = 96 / 5 = 19.2
+</pre>
+<hr>
+<pre>
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  display:flex;
+  flex-flow: row wrap;
+  gap: 1em 1%; /* = row-gap: 1%; column-gap: 1em; */
+}
+
+.container > * {
+  flex: 0 0 19.2%;
+  border:1px solid red;
+}
+</pre>
+    </main>
+  </body>
+</html>
