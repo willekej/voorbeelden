@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+.articles {
+    width: 812px;    
+    height: 812px;
+    margin: 0 auto;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    background-color: #e5e5e5;
+    display: flex;                   /* <--  */
+    flex-flow: row wrap;             /* <--  */
+    align-content: start;            /* <--  */
+}
+
+.articles > * {
+    background-color: white;
+    height: 90px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 5px 5px lightgray;
+    flex: 0 0 260px;                /* <--  */
+    border: 1px solid black;
+}
+
+.articles img {
+    position: absolute;
+    right: 5px;
+    top: 10px
+}
+
+.pokenumber {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    font-size: small;
+    color: gray;
+}
+
+.typeoverview {
+    margin-top: 15px;
+}
+
+.type {
+    padding: 5px 10px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 4px;
+    color: white;
+}
+
+.type.grass {
+    background-color: #78c850;
+}
+
+.type.fire {
+    background-color: #f08030;
+}
+
+.type.poison {
+    background-color: #a040a0;
+}
+
+.type.flying {
+    background-color: #a890f0;
+}
+
+h1 {
+    color: #4078c0;
+    margin: 0;
+}
+
+
