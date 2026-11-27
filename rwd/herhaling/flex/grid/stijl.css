@@ -1,0 +1,12 @@
+span{
+	width:100px;
+	height:100px;
+	border:1px solid red;
+	display: inline-block;
+}
+
+div{
+	border:1px solid blue;
+	width: 20%;
+	height: 200px;
+}

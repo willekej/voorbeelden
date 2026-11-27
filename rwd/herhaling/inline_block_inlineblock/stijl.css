@@ -1,0 +1,13 @@
+strong{
+	border:1px solid red;
+}
+
+span{
+	color:red;
+	text-decoration:underline;
+	display:inline-block;
+	height:50px;
+	border:1px solid red;
+}
+
+
